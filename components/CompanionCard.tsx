@@ -1,8 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 
 interface CompanionCardProps {
   id: string;
@@ -21,14 +20,16 @@ const CompanionCard = ({
   duration,
   color,
 }: CompanionCardProps) => {
-
+  const pathname = usePathname();
   return (
     <article className="companion-card" style={{ backgroundColor: color }}>
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
         <button className="companion-bookmark">
           <Image
-            src= "/icons/bookmark-filled.svg"
+            src={
+           "/icons/bookmark-filled.svg"
+            }
             alt="bookmark"
             width={12.5}
             height={15}
