@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer"; // <-- Import Footer
 import { ClerkProvider } from "@clerk/nextjs";
 
 const bricolage = Bricolage_Grotesque({
@@ -10,7 +11,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
+  title: "Yope",
   description: "Real-time AI Teaching Platform",
 };
 
@@ -22,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bricolage.variable} antialiased`}>
-        <ClerkProvider appearance={{ variables: { colorPrimary: '#fe5933' }} }>
+        <ClerkProvider appearance={{ variables: { colorPrimary: "#fe5933" } }}>
           <Navbar />
-          {children}
+          <main className="pt-1 pb-8">{children}</main>
+          <Footer /> {/* Add Footer here */}
         </ClerkProvider>
       </body>
     </html>

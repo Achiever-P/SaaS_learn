@@ -21,36 +21,44 @@ const CompanionCard = ({
   color,
 }: CompanionCardProps) => {
   const pathname = usePathname();
+
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article
+      className="companion-card p-4 rounded-xl shadow-md flex flex-col gap-3 sm:gap-4"
+      style={{ backgroundColor: color }}
+    >
+    
       <div className="flex justify-between items-center">
-        <div className="subject-badge">{subject}</div>
+        <div className="subject-badge">
+          {subject}
+        </div>
         <button className="companion-bookmark">
           <Image
-            src={
-           "/icons/bookmark-filled.svg"
-            }
+            src="/icons/bookmark-filled.svg"
             alt="bookmark"
-            width={12.5}
-            height={15}
+            width={14}
+            height={14}
           />
         </button>
       </div>
 
-      <h2 className="text-2xl font-bold">{name}</h2>
-      <p className="text-sm">{topic}</p>
+      
+      <h2 className="text-xl sm:text-2xl font-bold break-words">{name}</h2>
+
+      <p className="text-sm sm:text-base">{topic}</p>
+
       <div className="flex items-center gap-2">
         <Image
           src="/icons/clock.svg"
           alt="duration"
-          width={13.5}
-          height={13.5}
+          width={14}
+          height={14}
         />
-        <p className="text-sm">{duration} minutes</p>
+        <p className="text-sm sm:text-base">{duration} minutes</p>
       </div>
 
-      <Link href={`/companions/${id}`} className="w-full">
-        <button className="btn-primary w-full justify-center">
+      <Link href={`/companions/${id}`} className="w-full mt-auto">
+        <button className="btn-primary w-full justify-center py-2 rounded-lg text-sm sm:text-base">
           Launch Lesson
         </button>
       </Link>
