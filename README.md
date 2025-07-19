@@ -1,4 +1,4 @@
-# 🎓 Yope - LMS SaaS Platform  
+# Yope - LMS SaaS Platform  
 
 Yope is a modern Learning Management System (LMS) SaaS application built from scratch using **Next.js**, **Supabase**, and **Stripe**. It features AI voice tutoring, user authentication, subscriptions, and real-time learning capabilities.  
 
