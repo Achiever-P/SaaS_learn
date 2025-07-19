@@ -47,18 +47,22 @@ Make sure you have these installed:
 ```bash
 git clone https://github.com/<your-username>/yope.git
 cd yope
+```
 
 ## 📦 Install Dependencies
-bash
+```bash
 Copy
 Edit
 npm install
+```
+
 🔑 Set Up Environment Variables
 Create a .env file in the root directory and add:
 
 env
 Copy
 Edit
+```
 # Sentry
 SENTRY_AUTH_TOKEN=
 
@@ -75,6 +79,7 @@ NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
 # Supabase
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 👉 Replace placeholder values with your credentials from:
 
 Supabase
@@ -86,8 +91,7 @@ Sentry
 Vapi
 
 ▶️ Run the Development Server
-bash
-Copy
-Edit
+```bash
 npm run dev
+```
 Open http://localhost:3000 in your browser.
